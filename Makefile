@@ -4,7 +4,7 @@ CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 RM = rm -rf
 
-FUNCTIONS = ft_isalpha.c \
+FUNCTION = ft_isalpha.c \
 			ft_isdigit.c \
 			ft_isalnum.c \
 			ft_isprint.c \
@@ -39,10 +39,22 @@ FUNCTIONS = ft_isalpha.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c
 
-OBJECTS = $(FUNCTIONS:.c=.o)
+OBJECTS = $(FUNCTION:.c=.o)
+
+BONUS = ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_back.c \
+		ft_lstdelone.c \
+		ft_lstclear.c \
+		ft_lstiter.c \
+		ft_lstmap.c
+
+B_OBJECTS = $(BONUS:.c=.o)
 
 $(NAME) : $(OBJECTS)
-	$(AR) $@ $^
+	$(AR) $(NAME) $^
 
 %.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -52,7 +64,9 @@ $(NAME) : $(OBJECTS)
 all : $(NAME)
 clean :
 	$(RM) $(OBJECTS)
+	$(RM) $(B_OBJECTS)
 fclean : clean
 	$(RM) $(NAME)
 re : fclean all
-bonus : 
+bonus : $(B_OBJECTS)
+	$(AR) $(NAME) $^
