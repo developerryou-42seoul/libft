@@ -6,7 +6,7 @@
 /*   By: sryou <sryou@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 10:08:07 by sryou             #+#    #+#             */
-/*   Updated: 2022/03/19 10:20:19 by sryou            ###   ########.fr       */
+/*   Updated: 2022/03/19 10:36:09 by sryou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*newlst;
 	t_list	*temp;
-	
+
 	newlst = 0;
 	while (lst)
 	{
