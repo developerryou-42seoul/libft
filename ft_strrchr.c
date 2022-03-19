@@ -6,7 +6,7 @@
 /*   By: sryou <sryou@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 14:53:57 by sryou             #+#    #+#             */
-/*   Updated: 2022/03/11 17:06:17 by sryou            ###   ########.fr       */
+/*   Updated: 2022/03/19 11:38:25 by sryou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,12 @@ char	*ft_strrchr(const char *s, int c)
 
 	ch_c = (char)c;
 	idx = ft_strlen(s);
-	while (idx >= 0)
+	while (1)
 	{
 		if (s[idx] == ch_c)
 			return ((char *)s + idx);
+		if (idx == 0)
+			break ;
 		idx--;
 	}
 	return (0);

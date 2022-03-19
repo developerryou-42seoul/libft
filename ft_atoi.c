@@ -6,7 +6,7 @@
 /*   By: sryou <sryou@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 16:45:26 by sryou             #+#    #+#             */
-/*   Updated: 2022/03/11 17:07:32 by sryou            ###   ########.fr       */
+/*   Updated: 2022/03/19 10:50:27 by sryou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ int	ft_atoi(const char *str)
 	}
 	res = 0;
 	while (ft_isdigit(*str))
+	{
 		res = res * 10 + (*str - '0');
+		str++;
+	}
 	return (res * sign);
 }

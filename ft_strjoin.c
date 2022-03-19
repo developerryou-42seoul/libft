@@ -6,7 +6,7 @@
 /*   By: sryou <sryou@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 19:47:53 by sryou             #+#    #+#             */
-/*   Updated: 2022/03/11 20:16:05 by sryou            ###   ########.fr       */
+/*   Updated: 2022/03/19 11:28:31 by sryou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (0);
 	mkstr[0] = '\0';
 	ft_strlcat(mkstr, s1, len1 + 1);
-	ft_strlcat(mkstr, s2, len2 + 1);
+	ft_strlcat(mkstr, s2, len1 + len2 + 1);
 	return (mkstr);
 }

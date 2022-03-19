@@ -6,7 +6,7 @@
 /*   By: sryou <sryou@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 19:36:58 by sryou             #+#    #+#             */
-/*   Updated: 2022/03/11 20:14:28 by sryou            ###   ########.fr       */
+/*   Updated: 2022/03/19 17:26:46 by sryou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (s == 0)
 		return (0);
 	size = ft_strlen(s);
-	if (size - start > len)
+	if (size > len + start)
 		size = len;
-	else
+	else if (size >= start)
 		size = size - start;
+	else
+		size = 0;
 	mkstr = (char *)malloc(sizeof(char) * (size + 1));
 	if (mkstr == 0)
 		return (0);

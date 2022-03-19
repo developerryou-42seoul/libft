@@ -6,7 +6,7 @@
 /*   By: sryou <sryou@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 19:53:35 by sryou             #+#    #+#             */
-/*   Updated: 2022/03/11 21:21:24 by sryou            ###   ########.fr       */
+/*   Updated: 2022/03/19 11:46:50 by sryou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,12 @@ static size_t	get_idx_ed(char const *s1, char const *set)
 {
 	size_t	idx;
 
-	idx = ft_strlen(s1) - 1;
-	while (idx >= 0)
+	idx = ft_strlen(s1);
+	while (1)
 	{
 		if (!ft_strchr(set, s1[idx]))
+			break ;
+		if (idx == 0)
 			break ;
 		idx--;
 	}
