@@ -6,7 +6,7 @@
 /*   By: sryou <sryou@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 20:42:29 by sryou             #+#    #+#             */
-/*   Updated: 2022/03/11 21:28:58 by sryou            ###   ########.fr       */
+/*   Updated: 2022/03/19 09:25:52 by sryou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static char	*cut_word(char const *s, int len)
 	return (word);
 }
 
-static char	*skip_str(char const *s, char c, size_t *len)
+static const char	*skip_str(char const *s, char c, size_t *len)
 {
 	*len = 0;
 	while (*s == c)

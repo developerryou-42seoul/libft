@@ -6,7 +6,7 @@
 /*   By: sryou <sryou@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 21:32:03 by sryou             #+#    #+#             */
-/*   Updated: 2022/03/11 21:34:59 by sryou            ###   ########.fr       */
+/*   Updated: 2022/03/19 09:26:16 by sryou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	size_t	idx;
 
 	if (s == 0 || f == 0)
-		return (0);
+		return ;
 	idx = 0;
 	while (s[idx])
 	{
