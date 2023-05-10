@@ -6,13 +6,13 @@
 /*   By: sryou <sryou@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 12:58:09 by sryou             #+#    #+#             */
-/*   Updated: 2022/03/11 14:47:36 by sryou            ###   ########.fr       */
+/*   Updated: 2022/05/14 13:56:02 by sryou            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned char	*str_dst;
 	unsigned char	*str_src;
